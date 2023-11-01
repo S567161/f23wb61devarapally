@@ -4,4 +4,17 @@ block content
   h1= title
   p Welcome to #{title}
   p Hi,This is Udaykiranreddy Devarapally
-  button(type="button", class="btn btn-secondary") Press Me
+  button(type="button", class="btn btn-secondary", onclick="increaseSpeed()") Press Me
+
+script.
+  function increaseSpeed() {
+    // Create a new div element
+    var newDiv = document.createElement("div");
+
+    // Set the id and text content for the new div
+    newDiv.id = "faster";
+    newDiv.textContent = "Increase the speed";
+
+    // Append the new div to the body (you can modify this based on where you want to append it)
+    document.body.appendChild(newDiv);
+  }
